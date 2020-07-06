@@ -1,0 +1,21 @@
+deepEl-connector:
+  api:
+    host: api.deepl.com
+    scheme: https
+    auth-key: 51e378c3-ef00-0742-21cf-ace21e24a0c6
+    get-query-string: auth_key={auth_key}&text={text}&source_lang={source_lang}&target_lang={target_lang}
+    post-query-string: auth_key={auth_key}
+    path: /v2/translate
+
+application:
+  chunks:
+    consumer-threads: 4
+
+httpClient:
+  proxy:
+    #host: userproxydc2.glb.ebc.local
+    host: userproxy.bgc.net
+    port: 8080
+    credentials:
+      user: id848421
+      password: Rp3EgDI3T+sGiNwiD0jh4tBk87QmPBfJ
