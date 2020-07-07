@@ -2,7 +2,7 @@ deepEl-connector:
   api:
     host: api.deepl.com
     scheme: https
-    auth-key: 51e378c3-ef00-0742-21cf-ace21e24a0c6
+    auth-key: ENC(x4kJsrKePUIm3VjBVAxC0x617cg+Iw76EIzDwUl1n7X0dVz5DSFoll+wZ6Sn5ALn)
     get-query-string: auth_key={auth_key}&text={text}&source_lang={source_lang}&target_lang={target_lang}
     post-query-string: auth_key={auth_key}
     path: /v2/translate
