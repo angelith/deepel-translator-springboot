@@ -1,6 +1,7 @@
 package demo.sakis.deepeltranslation.agent.deepel;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ulisesbocchio.jasyptspringboot.annotation.EnableEncryptableProperties;
 import demo.sakis.deepeltranslation.agent.TranslationAgent;
 import demo.sakis.deepeltranslation.agent.deepel.model.DeepElChunk;
 import demo.sakis.deepeltranslation.agent.deepel.model.DeepElRequest;
@@ -21,10 +22,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Modifier;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Slf4j
@@ -98,7 +96,7 @@ public class DeepElAgent implements TranslationAgent<String> {
 						String methodName = method.getName();
 						String fieldName = StringUtils.substringAfter(methodName, "get").toLowerCase();
 						try {
-							multiValueMap.put(fieldName, Arrays.asList(method.invoke(o)));
+							multiValueMap.put(fieldName, Collections.singletonList(method.invoke(o)));
 						} catch (IllegalAccessException | InvocationTargetException e) {
 							log.error(e.getMessage(), e);
 						}

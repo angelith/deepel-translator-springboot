@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/deepel-translator-springboot.iml" filepath="$PROJECT_DIR$/.idea/deepel-translator-springboot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/deepeltranslation/deepeltranslation.iml" filepath="$PROJECT_DIR$/deepeltranslation/deepeltranslation.iml" />
     </modules>
   </component>
 </project>
