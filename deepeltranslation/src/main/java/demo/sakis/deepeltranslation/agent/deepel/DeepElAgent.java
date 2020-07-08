@@ -1,12 +1,9 @@
 package demo.sakis.deepeltranslation.agent.deepel;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.ulisesbocchio.jasyptspringboot.annotation.EnableEncryptableProperties;
-import demo.sakis.deepeltranslation.agent.TranslationAgent;
-import demo.sakis.deepeltranslation.agent.deepel.model.DeepElChunk;
+import demo.sakis.deepeltranslation.agent.StringTranslationAgent;
 import demo.sakis.deepeltranslation.agent.deepel.model.DeepElRequest;
 import demo.sakis.deepeltranslation.agent.deepel.model.DeepElResponse;
-import demo.sakis.deepeltranslation.agent.deepel.queue.ChunkStore;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
@@ -27,7 +24,7 @@ import java.util.stream.Collectors;
 
 @Slf4j
 @Component
-public class DeepElAgent implements TranslationAgent<String> {
+public class DeepElAgent implements StringTranslationAgent {
 	
 	private final RestTemplate restTemplate;
 	

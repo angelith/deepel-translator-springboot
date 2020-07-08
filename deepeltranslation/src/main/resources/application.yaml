@@ -9,7 +9,8 @@ deepEl-connector:
 
 
 application:
-  chunks:
+  threads:
+    use-cached-executor: true
     consumer-threads: 4
 
 jasypt:

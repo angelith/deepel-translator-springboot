@@ -1,7 +1,7 @@
 package demo.sakis.deepeltranslation.controller;
 
-import demo.sakis.deepeltranslation.agent.deepel.thread.TranslationEngineFacade;
-import demo.sakis.deepeltranslation.agent.deepel.thread.TranslationParallelEngine;
+import demo.sakis.deepeltranslation.translation.engine.TranslationEngineFacade;
+import demo.sakis.deepeltranslation.agent.deepel.translation.engine.parallel.TranslationParallelEngine;
 
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.web.bind.annotation.*;
